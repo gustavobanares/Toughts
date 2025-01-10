@@ -17,7 +17,7 @@ const toughtsRoutes = require('./routes/toughtsRoutes');
 const authRoutes = require('./routes/authRoutes');
 
 // Import Controller
-const ToughController = require("./controllers/ToughController");
+const ToughtController = require("./controllers/ToughtController");
 
 
 app.engine("handlebars", exphbs.engine());
@@ -72,7 +72,7 @@ app.use((req, res, next) => {
 app.use('/toughts', toughtsRoutes)
 app.use('/', authRoutes)
 
-app.get('/', ToughController.showToughts)
+app.get('/', ToughtController.showToughts)
 
 conn
   .sync()

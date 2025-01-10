@@ -1,9 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const ToughController = require('../controllers/ToughController')
+const ToughtController = require('../controllers/ToughtController')
 
+// helpers
+const checkAuth = require("../helpers/auth").checkAuth;
 // controller
 
-router.get('/', ToughController.showToughts)
+router.get("/dashboard", checkAuth, ToughtController.dashboard);
+router.get("/", ToughtController.showToughts);
+
+
 
 module.exports = router 
