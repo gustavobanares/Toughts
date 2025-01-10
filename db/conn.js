@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize("toughts", "root", "", {
   host: "localhost",
@@ -12,4 +12,4 @@ try {
   console.log(`Nao foi possivel conectar ${err}`);
 }
 
-export default sequelize
+module.exports = sequelize
