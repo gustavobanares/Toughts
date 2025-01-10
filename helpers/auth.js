@@ -3,7 +3,7 @@ module.exports.checkAuth = function (req, res, next) {
 
   if (!userId) {
     res.redirect("/login");
+  } else {
+    next();
   }
-
-  next();
 };
