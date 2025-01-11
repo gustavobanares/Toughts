@@ -23,8 +23,6 @@ module.exports = class ToughController {
       emptyToughts = false;
     }
 
-    console.log(toughts);
-    console.log(emptyToughts);
 
     res.render("toughts/dashboard", { toughts, emptyToughts });
   }
@@ -50,7 +48,6 @@ module.exports = class ToughController {
   }
 
   static showToughts(req, res) {
-    console.log(req.query);
 
     // check if user is searching
     let search = "";
